@@ -94,7 +94,7 @@ Es para miniproyectos, para proyectos más grandes:
 <li><a src="https://www.gitpod.io/">Gitpod</a></li>
 <li><a src="https://internetcomputer.org/docs/current/developer-docs/getting-started/install/">Local dfxvm gestor de versiones</a></li>
  </ul>
-[A https://github.com/codespaces](#github-codespace)
+- [Github codespace]([https://github.com/your-username](https://github.com/codespaces))
 
 # Enlaces #
 Frontend:
