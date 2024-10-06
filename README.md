@@ -89,11 +89,13 @@ mainnet es la red principal de la blockchain, y la testnet es la red local donde
 <a src="https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/
 ">Motoko Playground</a>
 Es para miniproyectos, para proyectos más grandes:
+<ul>
+<li><a src="https://github.com/codespaces" name="github-codespace">Github codespace</a></li>
+<li><a src="https://www.gitpod.io/">Gitpod</a></li>
+<li><a src="https://internetcomputer.org/docs/current/developer-docs/getting-started/install/">Local dfxvm gestor de versiones</a></li>
+ </ul>
+[A https://github.com/codespaces](#github-codespace)
 
-<a src="https://github.com/codespaces">Github codespace</a>
-<a src="https://www.gitpod.io/">Gitpod</a>
-<a src="https://internetcomputer.org/docs/current/developer-docs/getting-started/install/">Local dfxvm gestor de versiones</a>
- 
 # Enlaces #
 Frontend:
 https://www.youtube.com/watch?v=oFljzGmCM-g&list=PLixWO0N_iFTM3haBGfEtIhyFQJd3BVfGB
