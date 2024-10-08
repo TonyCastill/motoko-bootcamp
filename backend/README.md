@@ -73,4 +73,107 @@ https://hobbi.me
   </tr>
 </table>
 
+**Local replica**
 
+<table>
+  <tr>
+    <th>Comando</th>
+    <th>Uso</th>
+  </tr>
+  <tr>
+    <td>$ dfx start --background --clean</td>
+    <td>Crear una replica de una network de producción en local. Con --background corre el canisteren 2do plano y con --clean la crea desde cero borrando todo rastro de anteriores ejecuciones</td>
+  </tr>
+ <tr>
+    <td>$ dfx stop</td>
+    <td>Parar la replica</td>
+ </tr>
+</table>
+
+**Desplegar**
+
+<table>
+  <tr>
+    <th>Comando</th>
+    <th>Uso</th>
+  </tr>
+  <tr>
+    <td>$ dfx deploy</td>
+    <td>Desplegar todos los canisters</td>
+  </tr>
+  <tr>
+    <td>$ dfx deploy _name_</td>
+    <td>Desplegar un canister, este va después del start. Esto crea los canisters, compila el código y lo lanza en los canisters</td>
+  </tr>
+</table>
+
+## Estructura de un proyecto ##
+
+**dfx.json**
+Es la estructura del proyecto de ICP
+Dentro de la clave "canisters" se construyen los botes donde se pondrá la aplicación
+
+
+# ¿Qué es Motoko? #
+
+Un lenguaje de programación de alto nivel diseñado para correr aplicaciones en ICP. Se usa para desarrollar aplicaciones backend. Es un lenguaje fuertemente tipado y fue diseñado para se sencillo y fácil de apreder
+
+## Estructura básica ##
+
+(Cada que se haga un cambio al código, se debe correr dfx deploy para ver los cambios)
+
+//imports
+
+actor Echo { //canister 
+  //Estado y acciones 
+
+
+  //VARIABLES
+  //Constantes
+  let PI = 3.1416;
+  //Mutables
+  var _name ="";
+};
+
+
+**Query Update**
+Métodos que me dan comportamientos
+
+actor  Echo{
+   func setName(name: Text){
+      _name := name;
+   }
+};
+
+Las funciones pueden ser private o public, pero public tiene dos subtipos
+
+//Update
+// Escritura y tarda más porque tiene que verificarse   replicarse en los nodos
+actor  Echo{
+   public func setName(name: Text){
+      _name := name;
+   }
+};
+
+
+//Query
+//Solo lectura y está optimizado para eso
+actor  Echo{
+   public query func getName(): async Text{
+      return "Tu nombre es " # _name; 
+      // se concatena con #
+   }
+};
+
+//Convertir Float a Text para imprimirlo
+
+import Text "mo:base/Text";
+import Float "mo:base/Float"; //From documentation
+
+actor Echo {
+   let PI = 3.1416
+
+    public query func getPI() : async Text{
+       return "El número PI es igual a " # Float.toText(PI);
+    };
+}
