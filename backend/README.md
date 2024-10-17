@@ -219,3 +219,6 @@ Hay dos tipos de memoria
  </tr>
 </table>
 
+
+
+
