@@ -107,6 +107,23 @@ https://hobbi.me
   </tr>
 </table>
 
+
+**Interactuar con un canister desde la consola**
+
+<table>
+  <tr>
+    <th>Comando</th>
+    <th>Uso</th>
+  </tr>
+ <tr>
+  <td>
+   dfx canister call _canister-name_ _function_
+  </td>
+  <td>
+   Call a function of a canister, you can see your canister names in dfx.json
+  </td>
+ </tr>
+ </table
 ## Estructura de un proyecto ##
 
 **dfx.json**
