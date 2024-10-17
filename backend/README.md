@@ -177,3 +177,45 @@ actor Echo {
        return "El número PI es igual a " # Float.toText(PI);
     };
 }
+
+# Memorías #
+Cada que se hace un deploy de un canister, se genera una cadena hash que sirve para verificar si hay cambios. En caso de que haya cambios, al generar la cadena deja de ser la misma, y cuando no hay cambios, es la misma cadena haciendo que sea más rápido el deploy
+
+Hay dos tipos de memoria
+* Heap Memory
+* Stable Memory
+
+<table>
+ <tr>
+  <th>
+   Memory feature
+  </th>
+  <th>
+   Heap Memory
+  </th>
+  <th>
+   Stable Memory
+  </th>
+ </tr>
+ <tr>
+  <td>Store capacity</td>
+  <td>40GB</td>
+  <td>400GB</td>
+ </tr>
+ <tr>
+  <td>Intended use</td>
+  <td>Small datasets, frequently accessed data, temporary data</td>
+  <td>Large datasets, infrequently accessed data, important data that msut persist</td>
+ </tr>
+ <tr>
+  <td>Persistance</td>
+  <td>Does not persist across upgrades</td>
+  <td>Data is preserved and persists across upgrades</td>
+ </tr>
+ <tr>
+  <td>Performance</td>
+  <td>Fast read/write operations</td>
+  <td>Slightly decreased read/write operations</td>
+ </tr>
+</table>
+
