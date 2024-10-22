@@ -138,13 +138,10 @@ Un lenguaje de programación de alto nivel diseñado para correr aplicaciones en
 ## Estructura básica ##
 
 (Cada que se haga un cambio al código, se debe correr dfx deploy para ver los cambios)
-
+```
 //imports
-
 actor Echo { //canister 
   //Estado y acciones 
-
-
   //VARIABLES
   //Constantes
   let PI = 3.1416;
@@ -152,6 +149,7 @@ actor Echo { //canister
   var _name ="";
 };
 
+```
 
 **Query Update**
 Métodos que me dan comportamientos
