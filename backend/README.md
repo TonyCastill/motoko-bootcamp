@@ -166,7 +166,8 @@ Las funciones pueden ser private o public, pero public tiene dos subtipos
 Modifican el estado de un actor
 Escritura y tarda más porque tiene que verificarse y replicarse en los nodos. Tardan de 2 a 3 segundos dependiendo de lo que se está haciendo.
 Con los dos puntos indica lo que devuelve la función, si es solo un paréntesis, no regresa nada.
-El shared indica que los funciones públicas o funciones que se comparten con otros actores, puedan compartir las variables. Que se puede usar la función desde fuera
+El shared indica que los funciones públicas o funciones que se comparten con otros actores, puedan compartir las variables. Que se puede usar la función desde fuera.
+shared se usa con métodos públicos **solo dentro de actores, no dentro de módulos**
 ```
 actor  Echo{
    public shared func setName(name: Text):(){
