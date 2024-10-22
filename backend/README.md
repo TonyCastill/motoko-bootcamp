@@ -151,37 +151,54 @@ actor Echo { //canister
 
 ```
 
-**Query Update**
+** Funciones **
 Métodos que me dan comportamientos
-
+```
 actor  Echo{
    func setName(name: Text){
       _name := name;
    }
 };
-
+```
 Las funciones pueden ser private o public, pero public tiene dos subtipos
 
-//Update
-// Escritura y tarda más porque tiene que verificarse   replicarse en los nodos
+**Update**
+Modifican el estado de un actor
+Escritura y tarda más porque tiene que verificarse y replicarse en los nodos. Tardan de 2 a 3 segundos dependiendo de lo que se está haciendo.
+Con los dos puntos indica lo que devuelve la función, si es solo un paréntesis, no regresa nada.
+El shared indica que los funciones públicas o funciones que se comparten con otros actores, puedan compartir las variables. Que se puede usar la función desde fuera
+```
 actor  Echo{
-   public func setName(name: Text){
+   public shared func setName(name: Text):(){
+      // := para asignar valor a la variable
       _name := name;
    }
 };
+```
+_Otro ejemplo_
+COmo la comunicación entre los actores es asíncrona, se usa la palabra reservada async para devolver algo desde una función
+```
+actor  Echo{
+   public func setName(name: Text): async Text{
+      // := para asignar valor a la variable
+      _name := name;
+      return _name;
+   };
+};
+```
 
-
-//Query
-//Solo lectura y está optimizado para eso
+**Query**
+Solo lectura y está optimizado para eso. Leen el estado de un actor
+```
 actor  Echo{
    public query func getName(): async Text{
       return "Tu nombre es " # _name; 
       // se concatena con #
    }
 };
-
+```
 //Convertir Float a Text para imprimirlo
-
+```
 import Text "mo:base/Text";
 import Float "mo:base/Float"; //From documentation
 
@@ -192,7 +209,7 @@ actor Echo {
        return "El número PI es igual a " # Float.toText(PI);
     };
 }
-
+```
 # Memorías #
 Cada que se hace un deploy de un canister, se genera una cadena hash que sirve para verificar si hay cambios. En caso de que haya cambios, al generar la cadena deja de ser la misma, y cuando no hay cambios, es la misma cadena haciendo que sea más rápido el deploy
 
