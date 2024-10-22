@@ -162,7 +162,7 @@ actor  Echo{
 ```
 Las funciones pueden ser private o public, pero public tiene dos subtipos
 
-**Update**
+### Update ###
 Modifican el estado de un actor
 Escritura y tarda más porque tiene que verificarse y replicarse en los nodos. Tardan de 2 a 3 segundos dependiendo de lo que se está haciendo.
 Con los dos puntos indica lo que devuelve la función, si es solo un paréntesis, no regresa nada.
@@ -187,7 +187,7 @@ actor  Echo{
 };
 ```
 
-**Query**
+### Query ###
 Solo lectura y está optimizado para eso. Leen el estado de un actor
 ```
 actor  Echo{
