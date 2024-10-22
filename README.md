@@ -1,5 +1,8 @@
 # motoko-bootcamp # 
-
+# Sobre motoko #
+Lenguaje de alto nivel
+Es un lenguaje orientado a actores, fuertemente tipado
+Los actores quiere decir que se desarrollan servicios que se comunican con otros (canisters) de manera asíncrona
 # Certificaciones #
 * **Qualified Developer:** Reconoce que el participante cuenta con los conociemientos básicos sobre el desarrollo en ICP utilizando Motoko como lenguaje de programación, se obtiene haciendo el Quizz de validación de conocimientos pasándolo con una calificación aprobatoria. Se necesita
 * * Cumplir con las actividades
